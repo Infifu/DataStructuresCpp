@@ -85,6 +85,5 @@ void cleanQueue(Queue* q)
 
 int main()
 {
-	Queue* q = new Queue;
-	delete q;
+	//
 }
