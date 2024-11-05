@@ -82,8 +82,3 @@ void cleanQueue(Queue* q)
 		q->_queue[i] = -1;
 	}
 }
-
-int main()
-{
-	//
-}
