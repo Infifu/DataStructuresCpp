@@ -69,7 +69,7 @@ int dequeue(Queue* q)
 		}
 
 		q->_queue[q->_size - 1] = -1;
-
+		q->_currentIndex--;
 		return elementToReturn;
 	}
 }// return element in top of queue, or -1 if empty
