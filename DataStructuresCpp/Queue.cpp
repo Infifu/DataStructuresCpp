@@ -86,20 +86,5 @@ void cleanQueue(Queue* q)
 int main()
 {
 	Queue* q = new Queue;
-	initQueue(q, 10);
-	std::cout << "Array Elements: ";
-	for (int i = 0; i < q->_size; i++)
-		std::cout << q->_queue[i] << " ";
-	std::cout << std::endl;
-	std::cout << "IsEmpty: 1 = true, 0 = false\n" << isEmpty(q) << std::endl;
-	enqueue(q, 1);
-	enqueue(q, 2);
-	enqueue(q, 3);
-	enqueue(q, 4);
-	enqueue(q, 5);
-	enqueue(q, 6);
-	enqueue(q, 7);
-	enqueue(q, 8);
-	enqueue(q, 9);
-	std::cout << "IsFull: 1 = true, 0 = false\n" << isFull(q) << std::endl;
+	delete q;
 }
