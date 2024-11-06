@@ -1,23 +1,47 @@
 #include "Stack.h"
+#include "Utils.h"
 #include <iostream>
 
 int main()
 {
-    Stack* s = new Stack;
-    initStack(s);
-    push(s, 1);
-    push(s, 2);
-    push(s, 3);
-    push(s, 4);
-    push(s, 5);
-    std::cout << pop(s) << std::endl; // Should print 5
-    std::cout << pop(s) << std::endl; // Should print 4
-    std::cout << pop(s) << std::endl; // Should print 3
-    std::cout << pop(s) << std::endl; // Should print 2
-    std::cout << pop(s) << std::endl; // Should print 1
-    std::cout << pop(s) << std::endl; // Should print -1 (stack is empty)
+	int choice = 0;
+	int element = 0;
+	Stack* s = new Stack;
+	while (choice != 6)
+	{
+		std::cout << "MENU: " << std::endl;
+		std::cout << "1.initStack " << std::endl;
+		std::cout << "2.Push " << std::endl;
+		std::cout << "3.Pop " << std::endl;
+		std::cout << "4.cleanStack " << std::endl;
+		std::cout << "5.isEmpty " << std::endl;
+		std::cout << "6.Leave " << std::endl;
+		std::cin >> choice;
 
-    cleanStack(s);
-    delete s;
-    return 0;
+		switch (choice)
+		{
+		case 1:
+			initStack(s);
+			break;
+		case 2:
+			std::cout << "Enter number to push: ";
+			std::cin >> element;
+			push(s, element);
+			break;
+		case 3:
+			pop(s);
+			break;
+		case 4:
+			cleanStack(s);
+			break;
+		case 5:
+			std::cout << std::boolalpha << isEmpty(s);
+			break;
+		case 6:
+			break;
+		default:
+
+			break;
+		}
+	}
 }

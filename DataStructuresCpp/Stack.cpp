@@ -51,3 +51,7 @@ void cleanStack(Stack* s)
     }
 }
 
+bool isEmpty(Stack* s)
+{
+    return ((s->Head->next == NULL && s->Head->value == -1) || s->Head == NULL);
+}

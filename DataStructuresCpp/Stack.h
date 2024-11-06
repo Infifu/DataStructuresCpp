@@ -16,4 +16,6 @@ int pop(Stack* s); // Return -1 if stack is empty
 void initStack(Stack* s);
 void cleanStack(Stack* s);
 
+bool isEmpty(Stack* s);
+
 #endif // STACK_H
