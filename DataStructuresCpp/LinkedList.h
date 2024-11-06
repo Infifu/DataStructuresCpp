@@ -1,5 +1,10 @@
 typedef struct LinkedList
 {
     int value;
-    struct LinkedList* next;
+    LinkedList* next;
 } LinkedList;
+
+LinkedList* createLinkedNode(int value);
+void addNode(LinkedList* head, int value);
+void printList(LinkedList* head);
+LinkedList* deleteNode(LinkedList* head);
