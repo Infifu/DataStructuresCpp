@@ -9,7 +9,7 @@ LinkedList* createLinkedNode(int value)
 	return newLinkedList;
 }
 
-void addNode(LinkedList* head,int value)
+void addNode(LinkedList* head, int value)
 {
 	LinkedList* newLinkedList = createLinkedNode(value);
 	LinkedList* curr = head;
