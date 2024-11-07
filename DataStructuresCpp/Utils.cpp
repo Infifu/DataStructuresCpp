@@ -4,6 +4,7 @@
 
 void reverse(int* nums, unsigned int size)
 {
+    //Push the array and then pop it
     int i = 0;
     Stack* s = new Stack;
     initStack(s);
@@ -18,7 +19,7 @@ void reverse(int* nums, unsigned int size)
         nums[i] = pop(s);
     }
 
-    // Clean up the stack to avoid memory leak
+    //Clean up the stack to avoid memory leak
     delete s;
 }
 
@@ -48,8 +49,7 @@ int* reverse10()
         nums[i] = pop(s);
     }
 
-    return nums;
-    // Clean up the stack to avoid memory leak
     delete[] nums;
     delete s;
+    return nums;
 }

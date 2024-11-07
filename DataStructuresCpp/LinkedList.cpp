@@ -1,6 +1,7 @@
 #include "LinkedList.h"
 #include "iostream"
 
+//This functions creates the head of the linked list
 LinkedList* createLinkedNode(int value)
 {
 	LinkedList* newLinkedList = new LinkedList;
@@ -9,6 +10,7 @@ LinkedList* createLinkedNode(int value)
 	return newLinkedList;
 }
 
+//This functions adds the note
 void addNode(LinkedList* head, int value)
 {
 	LinkedList* newLinkedList = createLinkedNode(value);
@@ -20,6 +22,7 @@ void addNode(LinkedList* head, int value)
 	curr->next = newLinkedList;
 }
 
+//This functions prints the linked list
 void printList(LinkedList* head)
 {
 	LinkedList* curr = head; // set the curr to head
@@ -30,6 +33,7 @@ void printList(LinkedList* head)
 	}
 }
 
+//This functions deletes the node
 LinkedList* deleteNode(LinkedList* head)
 {
 	LinkedList* curr = head;

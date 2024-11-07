@@ -35,7 +35,7 @@ void initQueue(Queue* q, unsigned int size)
 	
 	for (i = 0;i < q->_size; i++)
 	{
-		q->_queue[i] = -1;
+		q->_queue[i] = -1; //set the whole array to -1
 	}
 }
 
@@ -65,7 +65,7 @@ int dequeue(Queue* q)
 
 		for (i = 0; i < q->_size; i++)
 		{
-			q->_queue[i] = q->_queue[i + 1];
+			q->_queue[i] = q->_queue[i + 1]; //shift the array to the left to make up space
 		}
 
 		q->_queue[q->_size - 1] = -1;
@@ -79,6 +79,6 @@ void cleanQueue(Queue* q)
 	int i = 0;
 	for (i = 0; i < q->_size; i++)
 	{
-		q->_queue[i] = -1;
+		q->_queue[i] = -1; //set the array to -1
 	}
 }

@@ -13,7 +13,7 @@ int pop(Stack* s)
     LinkedList* prev = NULL;
     int value;
 
-    if ((s->Head->next == NULL && s->Head->value == -1) || s->Head == NULL) // Return -1 if stack is empty
+    if (isEmpty(s) == true) // Return -1 if stack is empty
     {
         return -1;
     }
@@ -41,17 +41,18 @@ void initStack(Stack* s)
 
 void cleanStack(Stack* s)
 {
-    LinkedList* curr = s->Head; // set the curr to head
+    LinkedList* curr = s->Head;
     LinkedList* temp = NULL;
-    while (curr)
+    while (curr) //loop through the list deleting every node
     {
-        temp = curr->next; // store the next node
-        delete curr; // free the current node
-        curr = temp; // move to the next node
+        temp = curr->next;
+        delete curr;
+        curr = temp;
     }
 }
 
 bool isEmpty(Stack* s)
 {
     return ((s->Head->next == NULL && s->Head->value == -1) || s->Head == NULL);
+    //checks if the head is null or if the head value is empty
 }
